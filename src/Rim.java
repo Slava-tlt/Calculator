@@ -63,8 +63,11 @@ public class Rim {
                 throw new Exception("//т.к. формат математического действия неверен (+, -, /, *)");
         }
 
-        if (result < 1) {
+        if (result < 0) {
             throw new Exception("//т.к. в римской системе нет отрицательных чисел");
+        }
+        if (result == 0) {
+            throw new Exception("//т.к. в римской системе нет числа ноль");
         }
 
         System.out.println(arrayRoman[result - 1]);     // переводим результат с арабской цифры обратно в римскую
